@@ -1,0 +1,46 @@
+---
+title: "README"
+output: html_notebook
+---
+
+
+# Project: 2 and 3 assets portfolio analysis with real returns
+
+
+## Objective
+
+To conduct 2-asset portfolio analysis with real returns and 3-asset portfolio analysis with real returns to make final recommendations to investors with different risk tolerance. 
+
+## Steps
+
+### Part 1: 2-asset portfolio analysis with real returns
+The analysis is conducted using annual real returns on investments in two assets: S&P 500 (including dividends) and US T. Bond.
+
+The following steps were undertaken:
+- Adjusting nominal returns to real returns
+- Conducting EDA --> Calculate statistics for raw real returns and statistics for excess returns
+- Assessing Asset Allocation
+- Calculating Minimum Variance Portfolio
+- Calculating Maximum Sharpe Ratio Portfolio
+
+### Part 2: 3-asset portfolio analysis with real returns
+
+Same steps were undertaken to conduct this analysis.
+Additionally, the efficient fronter was calculated by using brute force with scalability of using N assets. 
+In order to identify optimal portfolios, two models were developed that apply brute force: 
+- Model I: calculated the 66 different possible combinations with 10% increment for each asset.
+- Model II:  calculated 1000 different weight combinations to find the best portfolio with Minimum Variance and Maximum Sharpe Ratio.
+
+
+## Data set
+
+Data obtained from Aswath Damodoran. It can be downloaded in the following link: http://www.stern.nyu.edu/~adamodar/pc/datasets/histimpl.xls // sheet: Returns by year. 
+The excel file was transformed into csv file (uploaded in the folder for direct use, name Data_class.csv).
+
+## Results
+
+Model II - FinQuest Method is preferable because it allows  to compare a higher number of portfolio combinations and thus the portfolio can be better optimized. It is also more flexible, as I can input the number of different portfolios we want to calculate and the number of assets in the portfolio.
+
+To recommend the investor to build a portfolio with 3 assets (Stock, T- Bond and Corporate Bond) and their allocation done based on the maximum Sharpe ratio using the brute force method with scalability - Stock 23.95%, T Bond 2.46%, Corporate Bond 73.59%. Conversely, if the investor wants a 3-asset portfolio with least risk involved, they can choose the portfolio with 6.6% risk and allocation as follows - Stock 10%, T Bond 70%, Corporate Bond 20%.
+The best portfolio based on the Sharpe ratio has the least weight on T Bond and maximum weight on Corporate bond because the Corporate bond rewards the investor better. It yields a higher return for the risk involved.
+Overall, a 3-asset portfolio has higher returns as compared to the 2-asset portfolio. A higher number of assets in a portfolio can help an investor to achieve diversification benefits easily.
